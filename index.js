@@ -147,9 +147,9 @@ eg.init().then(async (success) => {
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
         if (!message.content.startsWith(prefix) || message.author.bot) return;
-        if (message.author.id != 307331927772364801) return message.channel.send(`${message.author}\nVocê não tem permissão para usar esse comando!`);
         if (command === "bot") {
-          (async () => {
+          if (message.author.id != 307331927772364801) return message.channel.send(`${message.author}\nVocê não tem permissão para usar esse comando!`);
+		  (async () => {
             if(args[0] == ('help')){
               var botcommands = "";
           botcommands += "\ns!bot banner <icon> <color>";
