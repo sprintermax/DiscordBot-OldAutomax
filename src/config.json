@@ -1,0 +1,51 @@
+{
+	"fortniteinfo": {
+		"email": "bobao@bobao.com",
+		"password" : "Boberto13579Hello",
+		"clientid": "647212b4-e22e-427f-84c6-e40e5daeb24d",
+		"clienttoken": "MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE=",
+		"fortnitetoken": "ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ="
+	},
+	"botsettings": {
+		"prefix": "s!",
+		"token" : "NjIyMjA2MjI4MTgxMDI0NzY4.XXwhCA.NXQTqgjih4gt2lTQQw1zmmeOtDk"
+	},
+	"peixotoimages": [
+		"https://cdn.discordapp.com/attachments/583495087200141324/622875540243611688/peixoto_3.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622875537345347584/2019-07-21_00_35_05-Window.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622875541912944642/2019-07-20_15_28_55-Window.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622877576012234753/unknown.png",
+		"https://cdn.discordapp.com/attachments/583491033363513345/622877737996255244/images.png",
+		"https://cdn.discordapp.com/attachments/583491033363513345/622877947077984266/images.png",
+		"https://cdn.discordapp.com/attachments/583491033363513345/622878137830866944/Z.png",
+		"https://cdn.discordapp.com/attachments/583491033363513345/622878758306840586/unknown.png",
+		"https://cdn.discordapp.com/attachments/591077338687471618/622878907829321741/maxresdefault.png",
+		"https://cdn.discordapp.com/attachments/591077338687471618/622879480368857089/62262187_119947442575487_6031054289039767912_n.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622882527287443489/a7ddef3a23236fd6a7eab388a6664112e57a0376r1-1920-1080v2_00.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622882638285504522/Fishstick.png",
+		"https://cdn.discordapp.com/attachments/583495087200141324/622882878820450316/68689104_101374137872999_1973897991852419550_n.png"
+	],
+	"minecraftdeaths": [
+		"foi esmagado(a) por uma bigorna em queda",
+		"foi espetado(a) até a morte",
+		"morreu afogado(a)",
+		"explodiu",
+		"caiu no chão com muita força",
+		"foi esmagado(a) por um bloco em queda",
+		"explodiu com um estrondo",
+		"experimentou energia cinética",
+		"morreu",
+		"pegou fogo",
+		"sufocou-se em uma parede",
+		"tentou nadar na lava",
+		"foi atingido(a) por um raio",
+		"foi morto(a) por magia",
+		"descobriu que o chão era de lava",
+		"queimou até a morte",
+		"caiu para fora do mundo",
+		"caiu de um lugar alto",
+		"caiu de uma escada",
+		"caiu de algumas vinhas",
+		"foi condenado(a) a cair"
+	]
+}
