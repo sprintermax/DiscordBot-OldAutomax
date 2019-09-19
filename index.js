@@ -5,7 +5,6 @@ const config = require("./src/config.json");
 const prefix = config.botsettings.prefix;
 const token = config.botsettings.token;
 
-const blacklist = require('./src/blacklist.js');
 const pingcmd = require('./src/comandos/ping.js');
 const hugcmd = require('./src/comandos/hug.js');
 const peixotocmd = require('./src/comandos/peixoto.js');
@@ -24,10 +23,6 @@ const bot = new comando.Client({
 bot.on("message", (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-
-    if (!message.author.bot) {
-        blacklist.run(message);
-    }
 
     if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot || !message.guild) return;
 
