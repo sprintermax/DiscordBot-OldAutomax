@@ -11,6 +11,7 @@ const peixotocmd = require('./src/comandos/peixoto.js');
 const killcmd = require('./src/comandos/kill.js');
 const givecmd = require('./src/comandos/give.js');
 const fncmd = require('./src/comandos/fn.js');
+const saycmd = require('./src/comandos/say.js');
 
 const bot = new comando.Client({
     commandPrefix: prefix,
@@ -21,28 +22,30 @@ const bot = new comando.Client({
 
 bot.on("message", (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const msgtext = message.content;
     const command = args.shift().toLowerCase();
 
     if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot || !message.guild) return;
 
     if (command == "ping") {
-        pingcmd.run(bot, message, args);
+        pingcmd.run(bot, message);
     }
     if (command == "hug") {
-        hugcmd.run(bot, message, args);
+        hugcmd.run(message, args);
     }
     if (command == "peixoto") {
-        peixotocmd.run(bot, message, args);
+        peixotocmd.run(message, args);
     }
     if (command == "kill") {
-        killcmd.run(bot, message, args);
+        killcmd.run(message, args);
     }
     if (command == "give") {
-        givecmd.run(bot, message, args);
+        givecmd.run(message, args);
     }
-    if (command === "fn") {
-        fncmd.run(bot, message, args);
+    if (command == "say") {
+        saycmd.run(message, prefix);
+    }
+    if (command == "fn") {
+        fncmd.run(message, args, prefix);
     }
 });
 

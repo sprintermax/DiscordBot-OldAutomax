@@ -1,14 +1,17 @@
 {
-	"fortniteinfo": {
-		"email": "bobao@bobao.com",
-		"password" : "Boberto13579Hello",
-		"clientid": "647212b4-e22e-427f-84c6-e40e5daeb24d",
-		"clienttoken": "MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE=",
-		"fortnitetoken": "ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ="
+	"ftninfo": {
+		"clientid": "647212b4-e22e-427f-84c6-e40e5daeb24d"
 	},
 	"botsettings": {
 		"prefix": "s!",
 		"token" : "NjIyMjA2MjI4MTgxMDI0NzY4.XXwhCA.NXQTqgjih4gt2lTQQw1zmmeOtDk"
+	},
+	"serverinfo": {
+		"allowedtosay": [
+			"603322220399427615",
+			"590363799534436375",
+			"583658113303838730"
+		]
 	},
 	"peixotoimages": [
 		"https://cdn.discordapp.com/attachments/583495087200141324/622875540243611688/peixoto_3.png",

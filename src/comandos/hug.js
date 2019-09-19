@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (message, args) => {
     if (args.length < 1){
         message.channel.send(`${message.author}\nVocê precisa especificar quem ou o quê você quer abraçar!`);
     } else {
