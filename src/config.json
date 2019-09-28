@@ -6,18 +6,6 @@
 		"prefix": "s!",
 		"token" : "NjIyMjA2MjI4MTgxMDI0NzY4.XXwhCA.NXQTqgjih4gt2lTQQw1zmmeOtDk"
 	},
-	"serverinfo": {
-		"allowedtosay": [
-			"603322220399427615",
-			"590363799534436375",
-			"583658113303838730"
-		],
-		"denniedwords": [
-			"fdp",
-			"aaaa",
-			"ohno"
-		]
-	},
 	"peixotoimages": [
 		"https://cdn.discordapp.com/attachments/583495087200141324/622875540243611688/peixoto_3.png",
 		"https://cdn.discordapp.com/attachments/583495087200141324/622875537345347584/2019-07-21_00_35_05-Window.png",
