@@ -7,5 +7,6 @@ module.exports.run = async (message) => {
 
     if(words.some(args=> denniedwords.includes(args.toUpperCase()))) {
         message.delete();
+        message.channel.send(`${message.author} Sem falar palavreado impróprio por favor`);
     }
 }

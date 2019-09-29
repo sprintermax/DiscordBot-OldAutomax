@@ -12,6 +12,7 @@ const killcmd = require('./src/comandos/kill.js');
 const givecmd = require('./src/comandos/give.js');
 const fncmd = require('./src/comandos/fn.js');
 const saycmd = require('./src/comandos/say.js');
+const rollcmd = require('./src/comandos/roll.js');
 
 const bot = new comando.Client({
     commandPrefix: prefix,
@@ -40,6 +41,9 @@ bot.on("message", (message) => {
     }
     if (command == "give") {
         givecmd.run(message, args);
+    }
+    if (command == "roll") {
+        rollcmd.run(message, args);
     }
     if (command == "say") {
         saycmd.run(message, prefix);
