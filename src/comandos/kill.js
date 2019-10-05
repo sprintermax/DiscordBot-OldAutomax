@@ -2,7 +2,7 @@ const config = require("../config.json");
 
 const minedeaths = config.minecraftdeaths;
 
-module.exports.run = async (message, args) => {
+module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 1){
         message.channel.send(`${message.author}\nVocê precisa especificar quem ou o quê você quer matar!`);
     } else {
