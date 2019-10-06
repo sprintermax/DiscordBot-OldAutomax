@@ -1,13 +1,19 @@
-module.exports.run = async (message, args) => {
+module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 2){
-        message.channel.send(`${message.author}\nVocê precisa especificar quem e o quê irá receber.`);
+        message.channel.send(`${message.author}\nVocê precisa mencionar quem e o quê irá receber.`);
     } else {
-        let [user, item, quantidade] = args;
+        const user = message.mentions.users.first();
+        let item = args[1];
+        let quantidade = args[2];
         if (args[2]) {
             var quantity = `${quantidade} `;
         } else {
             var quantity = ``;
         }
-        message.channel.send(`Dado ${quantity}${item} para ${user}`);
+		if (!user) {
+            message.channel.send(`${message.author}\n"${args[0]}" é inválido. Você precisa mencionar algum usuário desse Servidor`);
+		} else {
+            message.channel.send(`Dado ${quantity}${item} para ${user}`);
+        }
     }
 }
