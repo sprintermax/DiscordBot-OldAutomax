@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     if (args.length < 1){
         message.channel.send(`${message.author}\nVocê precisa mencionar quem você quer abraçar!`);
     } else {

@@ -5,7 +5,7 @@ const config = require("../config.json");
 
 const fnstats = new fnclient(config.ftninfo.clientid);
 
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     if (args.length < 1){
         message.channel.send(`${message.author}\n\`s!fn <pc|xbl|psn> <global|solo|duo|squad> <username>\``);
     } else {

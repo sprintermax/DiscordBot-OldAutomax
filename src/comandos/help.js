@@ -1,8 +1,8 @@
 const discord = require('discord.js');
 
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     var msg = '';
-    msg += '\n\n**Comandos para Todos:**';
+    msg += '\n\n**Comandos Gerais:**';
     msg += '\n\`hug <usuário>\`\n└Abraça o Usuário mencionado';
     msg += '\n\`peixoto <opcional:usuário>\`\n└Mostra uma imagem aleatória do Peixoto a você ou ao Usuário mencionado';
     msg += '\n\`kill <usuário>\`\n└Manda uma mensagem de morte do Minecraft para o Usuário mencionado';
@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     msg += '\n\`fn <plataforma: PC|XBL|PSN> <modo:GLOBAL|SOLO|DUO|SQUAD> <nick>\`\n└Mostra as estatísticas do jogador mencionado no Fortnite Battle Royale';
     msg += '\n\n**Comandos Especiais:**';
     msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
+    msg += '\n\`prefix <prefixo>\`\n├Altera o prefixo do Bot\n└─Requer permissão: Gerenciar Servidor';
     msg += '\n\`sayas <usuário> <texto>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
     msg += '\n\`botsay <texto>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
 
@@ -20,5 +21,12 @@ module.exports.run = async (bot, message, args, prefix) => {
     .setDescription(msg)
     .setColor("#FF00FF")
 
-    message.channel.send(`${message.author}\nMeu prefixo está configurado para **\`${prefix}\`**, aqui está uma lista dos meus comandos:`, embed);
+    message.author.send(`Meu prefixo no servidor **${message.guild.name}** está configurado para **\`${prefix}\`**, aqui está uma lista dos meus comandos:`, embed)
+    .then(() => {
+        message.channel.send(`${message.author}\nEnviei! Dê uma olhada nas suas Mensagens Privadas`);
+    })
+    .catch(() => {
+        message.channel.send(`${message.author}\nNão consigo enviar mensagens no seu privado, verifique se suas configurações de privacidade estão bloqueando isso.`)
+        return;
+    });
 }

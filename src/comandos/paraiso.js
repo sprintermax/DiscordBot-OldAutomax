@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     if (args.length < 1){
         message.channel.send(`${message.author} aqui está o link de convite do **Paraíso do Sprinter**:\nhttps://discord.gg/VxmTj6U`);
     } else {

@@ -2,7 +2,7 @@ const config = require("../config.json");
 
 const minedeaths = config.minecraftdeaths;
 
-module.exports.run = async (bot, message, args, prefix) => {
+module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     if (args.length < 1){
         message.channel.send(`${message.author}\nVocê precisa especificar quem você quer eliminar!`);
     } else {
