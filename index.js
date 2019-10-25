@@ -1,5 +1,4 @@
 const comando = require('discord.js-commando');
-const low = require('lowdb')
 
 const config = require("./src/config.json");
 
