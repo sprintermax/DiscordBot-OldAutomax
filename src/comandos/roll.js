@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
+module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 1){
         var choise = Math.floor(Math.random() * 6 + 1);
         message.channel.send(`${message.author} rolei o dado e caiu: **${choise}**`);

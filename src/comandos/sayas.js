@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
+module.exports.run = async (bot, message, args, prefix) => {
   if(message.member.hasPermission("MANAGE_MESSAGES")) {
     if (args.length < 2) {
       message.channel.send(`${message.author}\nVocê precisa mencionar quem eu devo imitar e o que eu devo dizer!`);

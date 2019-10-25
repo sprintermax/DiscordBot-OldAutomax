@@ -1,6 +1,6 @@
 const discord = require('discord.js');
 
-module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
+module.exports.run = async (bot, message, args, prefix) => {
     var msg = '';
     msg += '\n\n**Comandos Gerais:**';
     msg += '\n\`hug <usuário>\`\n└Abraça o Usuário mencionado';
@@ -13,7 +13,6 @@ module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
     msg += '\n\`fn <plataforma: PC|XBL|PSN> <modo:GLOBAL|SOLO|DUO|SQUAD> <nick>\`\n└Mostra as estatísticas do jogador mencionado no Fortnite Battle Royale';
     msg += '\n\n**Comandos Especiais:**';
     msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
-    msg += '\n\`prefix <prefixo>\`\n├Altera o prefixo do Bot\n└─Requer permissão: Gerenciar Servidor';
     msg += '\n\`sayas <usuário> <texto>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
     msg += '\n\`botsay <texto>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
 

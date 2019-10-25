@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial Black;
+  color: white;
+  background: url("https://cdn.discordapp.com/attachments/624353978435502137/632756850613288970/LojaDeItens-Background.png");
+  background-size: 1920px 1080px;
+  z-index: 1;
+}
+
+.date{
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 100px;
+  padding: 0px 40px 0px 0px;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div>
+	<h1 class="date">currentdate</h1>
+</div>
+<div class="split left">
+  <div class="centered">
+    <h1>Sprinter é Bobão</h1>
+	<h1>Isso é Um teste</h1>
+	<h1>TESTADO COM SUCESSO</h1>
+  </div>
+</div>
+
+
+<div class="split right">
+  <div class="centered">
+    <h1>TODO MUNDO É BOBÃO</h1>
+	<h1>QUEM DEU O COMANDO É BOBÃO</h1>
+  </div>
+</div>
+</body>
+</html> 

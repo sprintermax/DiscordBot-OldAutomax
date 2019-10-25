@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
+module.exports.run = async (bot, message, args, prefix) => {
   if (args.length < 1) {
     message.channel.send(`${message.author}\nVocê precisa escrever o que eu devo dizer!`);
   } else {

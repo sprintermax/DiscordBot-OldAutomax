@@ -4,7 +4,7 @@ const config = require("../config.json");
 
 const peixotos = config.peixotoimages;
 
-module.exports.run = async (bot, message, args, prefix, guildcfg, db) => {
+module.exports.run = async (bot, message, args, prefix) => {
     var peixoto = peixotos[Math.floor(Math.random() * peixotos.length)];
     if (args.length < 1){
         message.channel.send(`${message.author} aqui está o Peixoto:`, new discord.Attachment(peixoto, 'peixoto.png'));
