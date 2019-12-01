@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     msg += '\n\`give <usuário> <item> <opcional:quantidade>\`\n└Dá um item simulando um comando do Minecraft para o Usuário mencionado';
     msg += '\n\`roll <opcional:quantidade>\`\n└Escolhe um número aleatório entre entre 1 até o valor escolhido (Padrão: 1 a 6)';
     msg += '\n\`say <texto>\`\n└Faz com que o Bot fale algo no chat como se fosse você';
+    msg += '\n\`oraculo <usuário>\`\n└Faz com que o Bot fale algo sobre o Usuário mencionado';
     msg += '\n\`fn <plataforma: PC|XBL|PSN> <modo:GLOBAL|SOLO|DUO|SQUAD> <nick>\`\n└Mostra as estatísticas do jogador mencionado no Fortnite Battle Royale';
     msg += '\n\n**Comandos Especiais:**';
     msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
