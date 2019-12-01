@@ -19,7 +19,7 @@ bot.on("message", (message) => {
     const command = args.shift().toLowerCase();
     if (!message.author.bot && message.guild) {
         if (message.content == "<@622206228181024768> help" || message.content == "<@622206228181024768> ?") {
-            message.channel.send(`${message.author} Meu prefixo é \`${prefix}\`, execute \`${prefix}help\` para obter uma lista dos meus comandos`);
+            message.channel.send(`${message.author} Meu prefixo é \`${prefix}\`, digite \`${prefix}help\` para obter uma lista dos meus comandos`);
         }
     }
 

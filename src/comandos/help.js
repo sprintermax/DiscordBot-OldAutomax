@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     msg += '\n\`fn <plataforma: PC|XBL|PSN> <modo:GLOBAL|SOLO|DUO|SQUAD> <nick>\`\n└Mostra as estatísticas do jogador mencionado no Fortnite Battle Royale';
     msg += '\n\n**Comandos Especiais:**';
     msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
+    msg += '\n\`sendembed <opcional: chat> <mensagem>\`\n└Faz o bot mandar uma mensagem em anexo no chat atual ou mencionado';
     msg += '\n\`sayas <usuário> <texto>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
     msg += '\n\`botsay <texto>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
 

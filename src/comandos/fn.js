@@ -67,7 +67,7 @@ module.exports.run = async (bot, message, args, prefix) => {
         .setAuthor(data.username)
         .setDescription(msg)
         .setColor("#FF00FF")
-        .setThumbnail("https://pbs.twimg.com/profile_images/1101123838589452299/rpu5UKTH.png");
+        // .setThumbnail("https://media.discordapp.net/attachments/610290751624183809/650730129097490463/rF1ASHnY_200x200.png");
 
         return message.channel.send(`${message.author}\nMostrando estatística **${gametype.toUpperCase()}** de **${data.username}** na plataforma **${plataforma.toUpperCase()}**`, embed);
     })
