@@ -15,18 +15,13 @@ module.exports.run = async (bot, message, args, prefix) => {
       }
       if (!channel) {
         mensagem = message.content.slice(prefix.length + 7).trim();
-        if (message.attachments.size > 0) {
-          attachment = new discord.Attachment(message.attachments.first().url);
-        } else {
-          attachment = "";
-        }
-        message.channel.send(mensagem, attachment);
+        message.channel.send(mensagem);
       } else {
         if (args.length < 2 && message.attachments.size == 0) {
           message.channel.send(`${message.author}\nVocê precisa especificar o que eu devo mandar!`);
         } else {
           if(channel.permissionsFor(message.author).has('SEND_MESSAGES')) {
-            mensagem = message.content.slice(prefix.length + args[0].length + 7).trim();;
+            mensagem = message.content.slice(prefix.length + args[0].length + 7).trim();
 
             if (message.attachments.size > 0) {
               attachment = new discord.Attachment(message.attachments.first().url);

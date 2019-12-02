@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 2) {
       message.channel.send(`${message.author}\nVocê precisa especificar o que eu devo mandar!`);
     } else {
-      var member, avatar;
+      var member;
       if (args[0].startsWith('<@') && args[0].endsWith('>')) {
         member = message.guild.member(message.mentions.users.first());
       } else {
