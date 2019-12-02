@@ -3,7 +3,7 @@
 		"clientid": "647212b4-e22e-427f-84c6-e40e5daeb24d"
 	},
 	"botsettings": {
-		"prefix": "s!",
+		"prefix": "e!",
 		"token" : "NjIyMjA2MjI4MTgxMDI0NzY4.XXwhCA.NXQTqgjih4gt2lTQQw1zmmeOtDk"
 	},
 	"peixotoimages": [
@@ -28,23 +28,18 @@
 		"foi esmagado(a) por uma bigorna em queda",
 		"foi espetado(a) até a morte",
 		"morreu afogado(a)",
-		"explodiu",
+		"foi explodido por um Creeper",
 		"caiu no chão com muita força",
 		"foi esmagado(a) por um bloco em queda",
-		"explodiu com um estrondo",
-		"experimentou energia cinética",
-		"morreu",
-		"pegou fogo",
+		"explodiu enquanto impulsionava uma Elytra com foguetes",
+		"descobriu que o fogo é quente",
 		"sufocou-se em uma parede",
 		"tentou nadar na lava",
 		"foi atingido(a) por um raio",
-		"foi morto(a) por magia",
+		"foi morto(a) por uma bruxa",
 		"descobriu que o chão era de lava",
-		"queimou até a morte",
+		"tentou fazer amizade com um esqueleto",
 		"caiu para fora do mundo",
-		"caiu de um lugar alto",
-		"caiu de uma escada",
-		"caiu de algumas vinhas",
-		"foi condenado(a) a cair"
+		"caiu de um lugar alto"
 	]
 }

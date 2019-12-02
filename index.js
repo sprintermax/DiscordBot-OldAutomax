@@ -8,7 +8,6 @@ const token = config.botsettings.token;
 const bot = new comando.Client({
     commandPrefix: prefix,
     owner: '307331927772364801',
-    disableEveryone: true,
     unknownCommandResponse: false
 });
 

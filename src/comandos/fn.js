@@ -66,8 +66,8 @@ module.exports.run = async (bot, message, args, prefix) => {
         var embed = new discord.RichEmbed()
         .setAuthor(data.username)
         .setDescription(msg)
-        .setColor("#FF00FF")
-        // .setThumbnail("https://media.discordapp.net/attachments/610290751624183809/650730129097490463/rF1ASHnY_200x200.png");
+        .setColor("#25C059")
+        .setThumbnail("https://cdn.discordapp.com/attachments/610290814811373590/650823022395129885/FortniteInq.jpg");
 
         return message.channel.send(`${message.author}\nMostrando estatística **${gametype.toUpperCase()}** de **${data.username}** na plataforma **${plataforma.toUpperCase()}**`, embed);
     })

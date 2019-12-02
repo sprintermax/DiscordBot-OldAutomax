@@ -2,7 +2,12 @@ module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 2){
         message.channel.send(`${message.author}\nVocê precisa mencionar quem e o quê irá receber.`);
     } else {
-        const user = message.mentions.users.first();
+        var user;
+        if (args[0].startsWith('<@') && args[0].endsWith('>')) {
+            user = message.mentions.users.first();
+        } else {
+            user = bot.users.get(args[0]);
+        }
         let item = args[1];
         let quantidade = args[2];
         if (args[2]) {

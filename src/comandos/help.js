@@ -14,12 +14,13 @@ module.exports.run = async (bot, message, args, prefix) => {
     msg += '\n\n**Comandos Especiais:**';
     msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
     msg += '\n\`sendembed <opcional: chat> <mensagem>\`\n└Faz o bot mandar uma mensagem em anexo no chat atual ou mencionado';
+    msg += '\n\`staffembed <opcional: chat> <mensagem>\`\n└Faz o bot mandar uma mensagem marcando everyone em anexo no chat atual ou mencionado\n└─Requer permissões: Gerenciar Servidor | Mencionar Everyone';
     msg += '\n\`sayas <usuário> <texto>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
     msg += '\n\`botsay <texto>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
 
     var embed = new discord.RichEmbed()
     .setDescription(msg)
-    .setColor("#FF00FF")
+    .setColor("#25C059")
 
     message.author.send(`Meu prefixo no servidor **${message.guild.name}** está configurado para **\`${prefix}\`**, aqui está uma lista dos meus comandos:`, embed)
     .then(() => {
