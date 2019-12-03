@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args, prefix) => {
           var embed = new discord.RichEmbed()
             .setDescription(mensagem)
             .setColor("#25C059")
-            .setFooter(`Enviado por: ${message.member.id}`);
+            //.setFooter(`Enviado por: ${message.member.id}`);
           message.channel.send("@everyone", embed);
           return;
         }
@@ -33,10 +33,10 @@ module.exports.run = async (bot, message, args, prefix) => {
             message.channel.send(`${message.author}\nVocê precisa especificar o que eu devo mandar!`);
             return;
           } else {
-            mensagem = message.content.slice(prefix.length + args[0].length + 10).trim();;
+            mensagem = message.content.slice(prefix.length + args[0].length + 12).trim();
             var embed = new discord.RichEmbed()
               .setColor("#25C059")
-              .setFooter(`Enviado por: ${message.member.id}`);
+              //.setFooter(`Enviado por: ${message.member.id}`);
             if (mensagem) {
               embed.setDescription(mensagem);
             }

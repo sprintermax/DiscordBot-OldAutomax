@@ -4,18 +4,18 @@ module.exports.run = async (bot, message, args, prefix) => {
   if(message.member.hasPermission("MANAGE_MESSAGES")) {
     var channel;
     if (args.length >= 1) {
-      if (args[0].startsWith('<#') && args[0].endsWith('>')) {
+      if (args[1].startsWith('<#') && args[1].endsWith('>')) {
         channel = message.mentions.channels.first();
       } else {
-        channel = bot.channels.get(args[0]);
+        channel = bot.channels.get(args[1]);
       }
     }
     var member;
     if (args.length >= 2) {
-      if (args[1].startsWith('<@') && args[1].endsWith('>')) {
+      if (args[0].startsWith('<@') && args[0].endsWith('>')) {
         member = message.guild.member(message.mentions.users.first());
       } else {
-        member = message.guild.members.get(args[1]);
+        member = message.guild.members.get(args[0]);
       }
     }
     if (args.length < 2) {
@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args, prefix) => {
       }
     } else {
       if (!member) {
-        message.channel.send(`${message.author}\n"${args[1]}" é inválido. Você precisa especificar algum Usuário desse servidor!`);
+        message.channel.send(`${message.author}\n"${args[0]}" é inválido. Você precisa especificar algum Usuário desse servidor!`);
         return;
       } else {
         if (!channel) {

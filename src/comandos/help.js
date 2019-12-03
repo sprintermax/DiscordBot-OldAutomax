@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args, prefix) => {
         msg += '\n\`ping\`\n└Mostra a Latência do Bot e da API';
         msg += '\n\`sendembed <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot mandar uma mensagem com conteúdo embed no chat atual ou mencionado';
         msg += '\n\`editembed <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot editar o conteúdo embed de uma mensagem no chat atual ou mencionado\n└─Requer permissão: Gerenciar Mensagens';
-        msg += '\n\`editmsg <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot editar o conteúdo de uma mensagem no chat atual ou mencionado\n└─Requer permissão: Gerenciar Mensagens';
+        msg += '\n\`editmsg <opcional:chat> <mensagem>\`\n└Faz o bot editar o conteúdo de uma mensagem no chat atual ou mencionado\n└─Requer permissão: Gerenciar Mensagens';
         msg += '\n\`staffembed <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot mandar uma mensagem marcando everyone com conteúdo embed no chat atual ou mencionado\n└─Requer permissões: Gerenciar Servidor | Mencionar Everyone';
         msg += '\n\`sayas <opcional:chat> <usuário> <conteúdo:mensagem|imagem>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
         msg += '\n\`botsay <opcional:chat> <conteúdo:mensagem|imagem>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
