@@ -19,6 +19,7 @@ const geral = oraculo.geral;
 module.exports.run = async (bot, message, args, prefix) => {
   if (args.length < 1) {
     message.channel.send(`${message.author}\nVocê precisa mencionar alguem para eu dar a minha opinião!`);
+    return;
   } else {
     var user;
     if (args[0].startsWith('<@') && args[0].endsWith('>')) {
@@ -28,6 +29,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     }
     if (!user) {
       message.channel.send(`${message.author}\n"${args[0]}" é inválido. Você precisa mencionar algum usuário desse Servidor`);
+      return;
     } else {
       const webhook = await message.channel.createWebhook("Oráculo", "https://media.discordapp.net/attachments/610290751624183809/650544030165368853/boladecristal.png").catch(error => console.log(error))
       message.delete();
@@ -74,10 +76,10 @@ module.exports.run = async (bot, message, args, prefix) => {
       if (user.id == "406196253484122133") {
         opiniao += `&&&${hugz[Math.floor(Math.random() * hugz.length)]}`;
       }
-
       opiniao = opiniao.trim().split("&&&");
       webhook.send(`${user} ${opiniao[Math.floor(Math.random() * opiniao.length)]}`);
-      return webhook.delete();
+      webhook.delete();
+      return;
     }
   }
 }

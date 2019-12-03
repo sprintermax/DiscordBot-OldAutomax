@@ -3,6 +3,7 @@ const discord = require('discord.js');
 module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 1 && message.attachments.size == 0) {
       message.channel.send(`${message.author}\nVocê precisa especificar o que eu devo mandar!`);
+      return;
     } else {
       var channel;
       if (args.length >= 1) {
@@ -13,14 +14,21 @@ module.exports.run = async (bot, message, args, prefix) => {
         }
       }
       if (!channel) {
-        mensagem = message.content.slice(prefix.length + 4).trim();
-        const webhook = await message.channel.createWebhook(message.member.displayName, message.author.avatarURL).catch(error => console.log(error));
-        webhook.send(mensagem);
-        webhook.delete();
-        message.delete();
+        if (message.attachments.size > 0) {
+          message.channel.send(`${message.author}\nVocê não pode enviar uma imagem no próprio Chat em que está executado o comando!`);
+          return;
+        } else {
+          mensagem = message.content.slice(prefix.length + 4).trim();
+          const webhook = await message.channel.createWebhook(message.member.displayName, message.author.avatarURL).catch(error => console.log(error));
+          webhook.send(mensagem);
+          webhook.delete();
+          message.delete();
+          return;
+        }
       } else {
         if (args.length < 2 && message.attachments.size == 0) {
           message.channel.send(`${message.author}\nVocê precisa especificar o que eu devo mandar!`);
+          return;
         } else {
           if(channel.permissionsFor(message.author).has('SEND_MESSAGES')) {
             mensagem = message.content.slice(prefix.length + args[0].length + 4).trim();
@@ -30,11 +38,14 @@ module.exports.run = async (bot, message, args, prefix) => {
               attachment = "";
             }
             const webhook = await message.client.channels.get(channel.id).createWebhook(message.member.displayName, message.author.avatarURL).catch(error => console.log(error));
-            webhook.send(mensagem, attachment);
-            webhook.delete();
-            message.channel.send(`${message.author}\nEnviei! Confira se está tudo certo no chat especificado (<#${channel.id}>).`);
+            webhook.send(mensagem, attachment).then(msg => {
+              message.channel.send(`${message.author}\nEnviei! Confira se está tudo certo com a mensagem no Chat especificado:\nhttps://discordapp.com/channels/${msg.guild.id}/${msg.channel.id}/${msg.id}`);
+              webhook.delete();
+              return;
+            });
           } else {
-            message.channel.send(`${message.author}\nVocê não tem permissão para mandar mensagens no chat mencionado!`);
+            message.channel.send(`${message.author}\nVocê não tem permissão para mandar mensagens no Chat mencionado!`);
+            return;
           }
         }
       }

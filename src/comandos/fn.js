@@ -7,11 +7,12 @@ const fnstats = new fnclient(config.ftninfo.clientid);
 
 module.exports.run = async (bot, message, args, prefix) => {
     if (args.length < 1){
-        message.channel.send(`${message.author}\n\`s!fn <pc|xbl|psn> <global|solo|duo|squad> <username>\``);
+        message.channel.send(`${message.author} Comando inválido, use:\n\`${prefix}fn <pc|xbl|psn> <global|solo|duo|squad> <username>\``);
+        return;
     } else {
         
         if (args.length < 3){
-            message.channel.send(`${message.author} Comando inválido, use:\n\`s!fn <pc, xbl, psn> <global|solo|duo|squad> <username>\``);
+            message.channel.send(`${message.author} Comando inválido, use:\n\`${prefix}fn <pc, xbl, psn> <global|solo|duo|squad> <username>\``);
             return;
         }
 
@@ -69,7 +70,8 @@ module.exports.run = async (bot, message, args, prefix) => {
         .setColor("#25C059")
         .setThumbnail("https://cdn.discordapp.com/attachments/610290814811373590/650823022395129885/FortniteInq.jpg");
 
-        return message.channel.send(`${message.author}\nMostrando estatística **${gametype.toUpperCase()}** de **${data.username}** na plataforma **${plataforma.toUpperCase()}**`, embed);
+        message.channel.send(`${message.author}\nMostrando estatística **${gametype.toUpperCase()}** de **${data.username}** na plataforma **${plataforma.toUpperCase()}**`, embed);
+        return;
     })
     }
 }

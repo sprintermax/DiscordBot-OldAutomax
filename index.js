@@ -17,8 +17,8 @@ bot.on("message", (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     if (!message.author.bot && message.guild) {
-        if (message.content == "<@622206228181024768> help" || message.content == "<@622206228181024768> ?") {
-            message.channel.send(`${message.author} Meu prefixo é \`${prefix}\`, digite \`${prefix}help\` para obter uma lista dos meus comandos`);
+        if (message.content == "<@622206228181024768> help" || message.content == "<@622206228181024768> ?" || message.content == "<@!622206228181024768> help" || message.content == "<@!622206228181024768> ?") {
+            message.channel.send(`${message.author} Meu prefixo é \`${prefix}\`, digite \`${prefix}help\` para obter uma lista dos meus comandos no seu privado`);
         }
     }
 

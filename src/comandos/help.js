@@ -30,6 +30,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     message.author.send(`Meu prefixo no servidor **${message.guild.name}** está configurado para **\`${prefix}\`**, aqui está uma lista dos meus comandos:`, embed)
     .then(() => {
         message.channel.send(`${message.author}\nEnviei! Dê uma olhada nas suas Mensagens Privadas`);
+        return;
     })
     .catch(() => {
         message.channel.send(`${message.author}\nNão consigo enviar mensagens no seu privado, verifique se suas configurações de privacidade estão bloqueando isso.`)
