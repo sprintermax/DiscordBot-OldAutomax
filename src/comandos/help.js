@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args, prefix) => {
         msg += '\n\`editembed <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot editar o conteúdo embed de uma mensagem no chat atual ou mencionado\n└─Requer permissão: Gerenciar Mensagens';
         msg += '\n\`editmsg <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot editar o conteúdo de uma mensagem no chat atual ou mencionado\n└─Requer permissão: Gerenciar Mensagens';
         msg += '\n\`staffembed <opcional:chat> <conteúdo:mensagem|imagem>\`\n└Faz o bot mandar uma mensagem marcando everyone com conteúdo embed no chat atual ou mencionado\n└─Requer permissões: Gerenciar Servidor | Mencionar Everyone';
-        msg += '\n\`sayas <usuário> <opcional:chat> <conteúdo:mensagem|imagem>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
+        msg += '\n\`sayas <opcional:chat> <usuário> <conteúdo:mensagem|imagem>\`\n├Faz com que o Bot fale algo no chat como se fosse o usuário mencionado\n└─Requer permissão: Gerenciar Mensagens';
         msg += '\n\`botsay <opcional:chat> <conteúdo:mensagem|imagem>\`\n├Faz com que o Bot fale algo no chat como ele mesmo\n└─Requer permissão: Gerenciar Mensagens';
         //msg += '\n\n**Observações:**';
         //msg += '\n-Comandos com envio de imagens anexadas só são possíveis caso for enviar a mensagem em OUTRO chat, pois a mensagem original do comando NÃO deve ser deletada, caso isso ocorra, a imagem na mensagem do bot irá sumir também';
