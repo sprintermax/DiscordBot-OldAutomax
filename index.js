@@ -13,7 +13,14 @@ const bot = new comando.Client({
 
 bot.on("message", (message) => {
 
+    //if (message.author.id !== '307331927772364801') return;
+
     if (message.channel.type == "dm") return;
+
+    message.content = message.content
+        .replace(`?{membercount}`, message.guild.memberCount)
+        .replace(`?{servername}`, message.guild.name)
+
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     if (!message.author.bot && message.guild) {
