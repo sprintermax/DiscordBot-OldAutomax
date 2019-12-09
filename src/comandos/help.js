@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args, prefix) => {
     msg += '\n\`emoji <emoji>\`\n└Faz com que o Bot envie informações sobre o Emoji mencionado';
     msg += '\n\`comer <mensagem>\`\n└Avisa que você comeu o conteúdo da mensagem';
     msg += '\n\`peixoto <opcional:usuário>\`\n└Mostra uma imagem aleatória do Peixoto a você ou ao Usuário mencionado';
+    msg += '\n\`fncode <mensagem>\`\n└Faz o bot verificar o status de um ou mais códigos do Fortnite (separados por espaço ou vírgula)';
     msg += '\n\`kill <usuário>\`\n└Manda uma mensagem de morte do Minecraft para o Usuário mencionado';
     msg += '\n\`give <usuário> <item> <opcional:quantidade>\`\n└Dá um item simulando um comando do Minecraft para o Usuário mencionado';
     msg += '\n\`roll <opcional:quantidade>\`\n└Escolhe um número aleatório entre entre 1 até o valor escolhido (Padrão: 1 a 6)';
