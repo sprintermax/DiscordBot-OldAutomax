@@ -17,9 +17,14 @@ bot.on("message", (message) => {
 
     if (message.channel.type == "dm") return;
 
-    message.content = message.content
-        .replace(`?{membercount}`, message.guild.memberCount)
-        .replace(`?{servername}`, message.guild.name)
+    // INICIO - Conversor de Variáveis
+    while (message.content.indexOf("?{membercount}") > -1) {
+        message.content = message.content.replace("?{membercount}", message.guild.memberCount);
+    }
+    while (message.content.indexOf("?{servername}") > -1) {
+        message.content = message.content.replace("?{servername}", message.guild.name);
+    }
+    // FIM - Conversor de Variáveis
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
